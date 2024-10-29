@@ -11,6 +11,10 @@ public class Cat {
     private String name, color, breed;
     private int age;
 
+    /**
+     * Class constructor list.
+     * @param meow name of the meow
+     */
     public Cat(final String meow, final String c, final int age, final String korat) {
         this.name = meow;
         this.color = c;
@@ -18,13 +22,16 @@ public class Cat {
         this.breed = korat;
     }
 
-    // This method is useful because it allows the cat to meow and introduce itself to the world in a single line of code.
-    public String meow() {
-        return "meow, meow, I am " + this.name + ", hear me purr, In this feline world, I'm the star, that's for sure. " +
-        "With whiskers long and fur so sleek, I'm here to share my story, so take a peek!";
+    /**
+     * This method is useful because it allows the cat to meow and introduce itself to the world in a single line of code.
+     * @return string value of return
+     */
+     public String meow() {
+        return "meow, meow, I am " + this.name + ", hear me purr, In this feline world, I'm the star, that's for sure. " 
+        + "With whiskers long and fur so sleek, I'm here to share my story, so take a peek!";
     }
 
-    public void setcolor(String c) {
+    public void setcolor(final String c) {
         this.color = c;
     }
 
@@ -32,7 +39,7 @@ public class Cat {
         return this.color;
     }
 
-    public int hasSamecolor(Cat cat) {
+    public int hasSamecolor(final Cat cat) {
         if (this.color == cat.color) {
             return 1;
         } else {
